@@ -22,11 +22,6 @@
                 southwestern United States has been in a prolonged drought, with conditions much drier than normal.
                 Data ranges from 2000 to 2016. Hover over or swipe a graph to see details for that state.
             </p>
-            <p>The first chart shows the Palmer Drought Index for the currently selected state.
-                The Palmer Drought Index is a measure of long term drought. It calculates soil moisture based on recent precipitation and temperature. 0 is considered
-                a normal level of soil moisture, while increasingly negative numbers indicate progressively severe levels of drought.
-                Positive numbers represent increasingly wet soil conditions. For full details see the
-                <a href="https://en.wikipedia.org/wiki/Palmer_drought_index">Wikipedia entry</a>.</p>
         </div>
     </div>
     <div class="row hide">
@@ -46,14 +41,24 @@
     </div>
     <div class="row charts opaque">
         <h2 class="text-center">Selected State: <span class="selected_state">California</span></h2>
+        <div class="col-sm-12 col-lg-offset-1 col-lg-10">
+            <h3 class="text-center">Palmer Drought Index</h3>
+            <p>The chart shows the Palmer Drought Index for the currently selected state.
+                The Palmer Drought Index is a measure of long term drought. It calculates soil moisture based on recent precipitation and temperature. 0 is considered
+                a normal level of soil moisture, while increasingly negative numbers indicate progressively severe levels of drought.
+                Positive numbers represent increasingly wet soil conditions. For full details see the
+                <a href="https://en.wikipedia.org/wiki/Palmer_drought_index">Wikipedia entry</a>.</p>
+        </div>
         <div id="drought_div" class="col-sm-12 col-lg-12"></div>
         <div id="precip_div" class="col-sm-12 col-lg-12">
+            <h3 class="text-center">Percipitation</h3>
             <p class="col-sm-12 col-lg-offset-1 col-lg-10">Compare the Palmer Drought index to the actual rain fall level.
                 California, for example, gets almost no rainfall in the summer.
             The chart below shows the amount of precipitation for the time period shown. Note that wet periods are often interspersed
             with drier periods. However, the net effect tends towards drier conditions.</p>
         </div>
         <div id="temp_div" class="col-sm-12 col-lg-12">
+            <h3 class="text-center">Temperatures</h3>
             <p class="col-sm-12 col-lg-offset-1 col-lg-10">The tendency towards less moisture is further exacerbated by
             temperatures that are greater than normal. So, even during the winter, the precipitation that does fall tends
                 to be rain instead of snow. Snow levels are important to much of this area, as snow acts as a natural storage system
@@ -85,7 +90,7 @@
 <script src="js/assets/d3-jetpack.min.js"></script>
 <script src="js/custom.js"></script>
 <script type="text/javascript">
-  /*  var _gaq = _gaq || [];
+   var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-47256145-1']);
     _gaq.push(['_trackPageview']);
 
@@ -93,7 +98,7 @@
         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })(); */
+    })();
 </script>
 </body>
 </html>
