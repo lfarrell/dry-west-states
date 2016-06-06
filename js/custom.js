@@ -249,7 +249,7 @@ d3.csv('data/all_2000.csv', function(datas) {
                         .classed("svg", true)
                         .classed("legend", true);
 
-                svg.attr("width", width + 100)
+                svg.attr("width", width + 120)
                     .attr("height", legend_height);
 
                 svg.append("g")
