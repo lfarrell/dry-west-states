@@ -144,7 +144,18 @@ d3.csv('data/all_2000.csv', function(datas) {
             var xAxis = d3.svg.axis()
                 .scale(xScale)
                 .orient("top")
-                .ticks(ticks);
+                .ticks(ticks)
+                .tickFormat(function(d) {
+                    var regx =  /\d{4}/;
+                    var year = regx.exec(d.toString());
+                    if(ticks >= 15) {
+                        return year[0];
+                    } else if(ticks >= 3) {
+                        return year[0].substr(2, 4);
+                    } else {
+                        return year[0];
+                    }
+                });
 
             var xAxisBottom = d3.svg.axis()
                 .scale(xScale)
