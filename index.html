@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Visualization of Historical Weather Trends of the United States" />
+    <meta name="keywords" content="United States Historical Temperature Anomalies,Temperatures,Historical Temperature Anomalies" />
+    <title>US Temperatures</title>
+    <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="container-fluid">
+    <div id="note" class="row">
+        <p id="load" class="text-center">Loading ...</p>
+    </div>
+    <div class="row hide">
+        <h1 class="text-center">The Drying of the West</h1>
+        <div class="col-sm-12 col-lg-offset-1 col-lg-10">
+            <p>The American West is naturally a dry place. However, since the turn of the 21st century much of the
+                southwestern United States has been in a prolonged drought, with conditions much drier than normal.
+                Data ranges from 2000 to 2016. Hover over or swipe a graph to see details for that state.
+            </p>
+            <p>The first chart shows the Palmer Drought Index for the currently selected state.
+                The Palmer Drought Index is a measure of long term drought. It calculates soil moisture based on recent precipitation and temperature. 0 is considered
+                a normal level of soil moisture, while increasingly negative numbers indicate progressively severe levels of drought.
+                Positive numbers represent increasingly wet soil conditions. For full details see the
+                <a href="https://en.wikipedia.org/wiki/Palmer_drought_index">Wikipedia entry</a>.</p>
+        </div>
+    </div>
+    <div class="row hide">
+        <div class="col-sm-12 col-lg-12" id="us_heat">
+            <div class="col-sm-offset-4 col-sm-4 col-lg-offset-4 col-lg-4">
+                <select id="state" name="state" class="form-control">
+                    <option value="">--Select State--</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="CA">California</option>
+                    <option value="CO">Colorado</option>
+                    <option value="NV">Nevada</option>
+                    <option value="NM">New Mexico</option>
+                    <option value="UT">Utah</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row charts opaque">
+        <h2 class="text-center">Selected State: <span class="selected_state">California</span></h2>
+        <div id="drought_div" class="col-sm-12 col-lg-12"></div>
+        <div id="precip_div" class="col-sm-12 col-lg-12">
+            <p class="col-sm-12 col-lg-offset-1 col-lg-10">Compare the Palmer Drought index to the actual rain fall level.
+                California, for example, gets almost no rainfall in the summer.
+            The chart below shows the amount of precipitation for the time period shown. Note that wet periods are often interspersed
+            with drier periods. However, the net effect tends towards drier conditions.</p>
+        </div>
+        <div id="temp_div" class="col-sm-12 col-lg-12">
+            <p class="col-sm-12 col-lg-offset-1 col-lg-10">The tendency towards less moisture is further exacerbated by
+            temperatures that are greater than normal. So, even during the winter, the precipitation that does fall tends
+                to be rain instead of snow. Snow levels are important to much of this area, as snow acts as a natural storage system
+            that melts slow over the spring and summer. This tends to reduce the impact of the lack of rainfall that the summers often
+            bring. The chart below shows the departure from normal temperature levels for the time period shown.</p>
+        </div>
+        <div class="col-sm-12 col-lg-12">
+            <footer>
+                <ul class="list-unstyled">
+                    <li><a href="../index.php">Other Visualizations</a></li>
+                    <li><a href="../western_water">Western Water</a></li>
+                    <li><a href="mailto:farrelldlfarrell@gmail.com">Email</a></li>
+                    <li><a href="https://twitter.com/farrelldlfarrel">Twitter</a></li>
+                </ul>
+            </footer>
+        </div>
+        <div class="col-sm-12 col-lg-12">
+            <p class="col-md-offset-1 subfooter">
+                All data courtesy of the <a href="http://www.ncdc.noaa.gov/cag/time-series/us/">
+                National Oceanic and Atmospheric Administration</a>.</p>
+            </p>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.js" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.6.7/d3-tip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/1.9.0/d3-legend.min.js"></script>
+<script src="js/assets/d3-jetpack.min.js"></script>
+<script src="js/custom.js"></script>
+<script type="text/javascript">
+  /*  var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-47256145-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })(); */
+</script>
+</body>
+</html>
